@@ -101,7 +101,7 @@ function flipDomino() {
 
 function removeDuplicates() {
   console.log("Before removing duplicates:", dominoData); // Log sebelum penghapusan
-  const seen = new Set<string>(); // Set untuk melacak kombinasi kartu yang sudah dilihat
+  const seen = new Set<string>(); // Set to track the combination of cards already seen//+
 
   dominoData = dominoData.filter((card) => {
     // Urutkan angka kartu agar [1, 2] dianggap sama dengan [2, 1]

@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "lib": ["ES6", "DOM"],
+    "target": "es5", // atau "es2015" jika ingin menggunakan fitur ES2015
     "module": "commonjs",
+    "lib": ["es2015", "dom"], // Tambahkan 'es2015' di sini
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./public" // Hasil kompilasi akan diletakkan di folder public
+    "outDir": "./dist"
   },
-  "include": ["src"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
