@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domino App</title>
+    <link href="styles.css" rel="stylesheet" />
+    <!-- Menggunakan Tailwind CSS -->
+  </head>
+  <body class="bg-gray-100 text-gray-800 p-6">
+    <h1 class="text-3xl font-bold mb-1">Domino Cards</h1>
+    <p class="text-gray-600 mt-1 mb-4">
+      Aplikasi dibuat oleh Angga Satria Bima
+    </p>
+
+    <!-- Daftar Kartu Domino -->
+    <ul id="domino-list" class="list-disc ml-5 mb-6"></ul>
+
+    <!-- Menampilkan jumlah double numbers -->
+    <p id="double-number-count" class="text-lg mb-4">Double Numbers: 0</p>
+
+    <!-- Tambahkan di bawah daftar kartu domino -->
+    <div class="flex space-x-2 mb-4">
+      <input
+        type="number"
+        id="left-number"
+        placeholder="Left Number"
+        class="border rounded px-2"
+      />
+      <input
+        type="number"
+        id="right-number"
+        placeholder="Right Number"
+        class="border rounded px-2"
+      />
+      <button
+        id="add-card"
+        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        onclick="addDominoCard()"
+      >
+        Add Card
+      </button>
+    </div>
+
+    <!-- Tambahkan di bawah input untuk menambah kartu domino -->
+    <div class="flex space-x-2 mb-4">
+      <input
+        type="number"
+        id="remove-left-number"
+        placeholder="Left Number to Remove"
+        class="border rounded px-2"
+      />
+      <input
+        type="number"
+        id="remove-right-number"
+        placeholder="Right Number to Remove"
+        class="border rounded px-2"
+      />
+      <button
+        id="remove-card"
+        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+        onclick="removeSpecificDominoCard()"
+      >
+        Remove Card
+      </button>
+    </div>
+
+    <!-- Tambahkan tombol-tombol di sini -->
+    <div class="space-x-2 mb-4">
+      <button
+        id="sort-asc"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onclick="sortDomino('asc')"
+      >
+        Sort Ascending
+      </button>
+      <button
+        id="sort-desc"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onclick="sortDomino('desc')"
+      >
+        Sort Descending
+      </button>
+      <button
+        id="flip"
+        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        onclick="flipDomino()"
+      >
+        Flip Cards
+      </button>
+      <button
+        id="remove-duplicates"
+        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+        onclick="removeDuplicates()"
+      >
+        Remove Duplicates
+      </button>
+
+      <button
+        id="reset"
+        class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+        onclick="resetDomino()"
+      >
+        Reset
+      </button>
+    </div>
+
+    <div class="flex items-center mb-4">
+      <!-- Kolom input untuk memasukkan angka yang ingin dihapus -->
+      <input
+        type="number"
+        id="number-input"
+        placeholder="Enter a number"
+        class="border p-2"
+      />
+      <button
+        id="remove-button"
+        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+        onclick="removeNumber()"
+      >
+        Remove
+      </button>
+    </div>
+
+    <!-- Menyertakan script untuk logika aplikasi -->
+    <script src="./app.js"></script>
+  </body>
+</html>
