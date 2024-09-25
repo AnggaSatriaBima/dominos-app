@@ -2,7 +2,7 @@
   "name": "domino-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc && npx postcss src/styles.css -o public/styles.css"
+    "build": "npx tsc && npx postcss src/styles.css -o public/styles.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
